@@ -1,0 +1,30 @@
+## December 18, 2016
+```{r, message=FALSE,warning=FALSE, echo=FALSE}
+library(dplyr)
+library(leaflet)
+
+uc_schools <- data.frame(name = c("University of California, Davis", "University of California,                                      Berkeley", "University of California, Irvine", "University of                                     California, Los Angeles", "University of California, Merced",                                    "University of California, Riverside", "University of                                              California, San Diego", "University of California, San                                            Francisco", "University of California, Santa Barbara",                                           "University of California, Santa Cruz"), 
+                         lat = c(38.5401844, 37.8722724, 33.6461322, 34.0706216, 37.3657371,     
+                                 33.9741228, 32.8769912, 37.7636928, 34.4134031, 36.9951398),
+                         lng = c(-121.7491281, -122.2598182, -117.8428335, -118.4445492,         
+                                 -120.4246769, -117.3277252, -117.2408697, -122.458306, 
+                                 -119.847136, -122.0529461))
+
+uc_schoolsites <- c(
+  "<a href='http://www.ucdavis.edu/'>UC Davis</a>",
+  "<a href='https://www.ucberkeley.edu/'>UC Berkeley</a>",
+  "<a href='http://www.ucirvine.edu/'>UC Irvine</a>",
+  "<a href='http://www.ucla.edu/'>UCLA</a>",
+  "<a href='http://www.ucmerced.edu/'>UC Merced</a>",
+  "<a href='http://www.ucriverside.edu/'>UC Riverside</a>",
+  "<a href='https://www.ucsd.edu/'>UC San Diego</a>",
+  "<a href='http://www.ucsf.edu/'>UC San Francisco</a>",
+  "<a href='http://www.ucsb.edu/'>UC Santa Barbara</a>",
+  "<a href='http://www.ucsc.edu/'>UC Santa Cruz</a>"
+)
+
+uc_schools %>%
+  leaflet() %>%
+  addTiles() %>%
+  addMarkers(popup = uc_schoolsites, clusterOptions = markerClusterOptions())
+```
