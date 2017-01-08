@@ -1,0 +1,62 @@
+---
+title       : Iris Species Identification
+subtitle    : Shiny Application
+author      : Hong Fan
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Iris Dataset in R
+
+1.Description
+
+This data set contains 150 iris flowers' measurements in centimeters of sepal length, sepal width, petal length and petal width. 150 flowers belong to 3 species. They are iris setosa, iris versicolor and iris virginica. 
+
+2.Summary of Each Variable
+
+```{r echo=F, results='asis', message=FALSE}
+summary(iris)
+```
+
+---
+
+## Figure 1 Sepal Length vs Sepal Width
+```{r, warning=FALSE, message=FALSE, echo=F}
+library(plotly)
+M1 = plot_ly(iris, type="scatter", x = ~Sepal.Length, y = ~Sepal.Width, mode = "markers", color = ~Species)
+htmlwidgets::saveWidget(M1, file = "demo1.html")
+```
+<iframe src="demo1.html" style="position:absolute;height:80%;width:90%"></iframe>
+
+---
+
+## Figure 2 Petal Length vs Petal Width
+```{r, warning=FALSE, message=FALSE, echo=F}
+library(plotly)
+M2 = plot_ly(iris, type="scatter", x = ~Petal.Length, y = ~Petal.Width, mode = "markers", color = ~Species)
+htmlwidgets::saveWidget(M2, file = "demo2.html")
+```
+<iframe src="demo2.html" style="position:absolute;height:80%;width:90%"></iframe>
+
+---
+
+## K Nearest Neighbors in Iris Identification Shiny App
+
+1. Sepal length, sepal width, petal length and petal width are the characteristics used to predict unknown iris species. 
+
+2. Euclidean distance is calculated to compare the closeness. 
+
+3. Users have the flexibility to choose the parameter k which is the number of neighbors used to predict the unknown iris species. 
+
+
+
+
+
+
+
+

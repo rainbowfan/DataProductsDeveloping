@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Iris Species Identification</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Iris Species Identification">
+  <meta name="author" content="Hong Fan">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Iris Species Identification</h1>
+    <h2>Shiny Application</h2>
+    <p>Hong Fan<br/></p>
+  </hgroup>
+    <a href="https://github.com/rainbowfan/DataProductsDeveloping/ShinyApp/slidifyDemo/zipball/gh-pages" class="example">
+     Download
+    </a>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Iris Dataset in R</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>1.Description</p>
+
+<p>This data set contains 150 iris flowers&#39; measurements in centimeters of sepal length, sepal width, petal length and petal width. 150 flowers belong to 3 species. They are iris setosa, iris versicolor and iris virginica. </p>
+
+<p>2.Summary of Each Variable</p>
+
+<p>Sepal.Length    Sepal.Width     Petal.Length    Petal.Width<br>
+ Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100<br>
+ 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300<br>
+ Median :5.800   Median :3.000   Median :4.350   Median :1.300<br>
+ Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199<br>
+ 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800<br>
+ Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500<br>
+       Species<br>
+ setosa    :50<br>
+ versicolor:50<br>
+ virginica :50  </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Figure 1 Sepal Length vs Sepal Width</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src="demo1.html" style="position:absolute;height:80%;width:90%"></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Figure 2 Petal Length vs Petal Width</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src="demo2.html" style="position:absolute;height:80%;width:90%"></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>K Nearest Neighbors in Iris Identification Shiny App</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li><p>Sepal length, sepal width, petal length and petal width are the characteristics used to predict unknown iris species. </p></li>
+<li><p>Euclidean distance is calculated to compare the closeness. </p></li>
+<li><p>Users have the flexibility to choose the parameter k which is the number of neighbors used to predict the unknown iris species. </p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Iris Dataset in R'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Figure 1 Sepal Length vs Sepal Width'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Figure 2 Petal Length vs Petal Width'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='K Nearest Neighbors in Iris Identification Shiny App'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
