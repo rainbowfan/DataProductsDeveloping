@@ -3,7 +3,6 @@ library(datasets)
 library(class)
 library(ggplot2)
 
-# Define server logic required to draw a histogram
 shinyServer(function(input, output) {
   output$pred<- reactive({
     test = cbind(input$box1, input$box2, input$box3, input$box4)

@@ -1,13 +1,9 @@
 library(shiny)
 
-# Define UI for application that draws a histogram
 shinyUI(fluidPage(
   
-  # Application title
   titlePanel("Iris Identification"),
-  
-  # Sidebar with a slider input for number of bins 
-  sidebarLayout(
+   sidebarLayout(
     sidebarPanel(
       "Please specify values in the following boxes.",
       textInput("box1", "Enter Sepal Length (cm):", value = "5.80"),
