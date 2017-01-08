@@ -9,22 +9,14 @@ hitheme     : tomorrow      #
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
-github:
-  user: rainbowfan
-  repo: DataProductsDeveloping/ShinyApp/slidifyDemo
 ---
 
 ## Iris Dataset in R
 
-1.Description
+Description
 
 This data set contains 150 iris flowers' measurements in centimeters of sepal length, sepal width, petal length and petal width. 150 flowers belong to 3 species. They are iris setosa, iris versicolor and iris virginica. 
 
-2.Summary of Each Variable
-
-```{r echo=F, results='asis', message=FALSE}
-summary(iris)
-```
 
 ---
 
@@ -47,7 +39,13 @@ htmlwidgets::saveWidget(M2, file = "demo2.html")
 <iframe src="demo2.html" style="position:absolute;height:80%;width:90%"></iframe>
 
 ---
+## Pre-filled Values
+The pre-filled values are the median values for the corresponding characteristics and are served as references for users. 
 
+<img src='image1.png' style="height:30%; width:50%">
+
+
+---
 ## K Nearest Neighbors in Iris Identification Shiny App
 
 1. Sepal length, sepal width, petal length and petal width are the characteristics used to predict unknown iris species. 
